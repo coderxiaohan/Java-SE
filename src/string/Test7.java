@@ -81,28 +81,28 @@ public class Test7 {
 //        System.out.println(s == "Hello");  //false
 //        System.out.println(s2 == "Hello");  //true
 
-        // Java 中提供的 "不可变的字符串"
-        long beg = System.currentTimeMillis();
-        String s = "hello";
-        for(int i = 0; i < 10_0000; i++){
-            s += i;
-        }
-        long end = System.currentTimeMillis();
-        System.out.println(end - beg);  //2794
-        System.out.println(s);
-
-        // Java 还提供了可变的字符串 StringBuilder. 用法和 String 非常相似. 可以方便的和 String 相互转换.
-        // 但是这个东西可以修改.
-        // 记录程序开始的时间戳, 单位是毫秒.
-        StringBuilder stringBuilder = new StringBuilder("Hello");
-        long beg = System.currentTimeMillis();
-        for(int i = 0; i < 100_0000; i++){
-            // 类似于 String 的 += 这个过程不会创建新的 StringBuilder 对象, 都是针对同一个对象操作的.
-            stringBuilder.append(i);
-        }
-        long end = System.currentTimeMillis();
-        System.out.println(end - beg); //20
-//        System.out.println(stringBuilder);
+//        // Java 中提供的 "不可变的字符串"
+//        long beg = System.currentTimeMillis();
+//        String s = "hello";
+//        for(int i = 0; i < 10_0000; i++){
+//            s += i;
+//        }
+//        long end = System.currentTimeMillis();
+//        System.out.println(end - beg);  //2794
+//        System.out.println(s);
+//
+//        // Java 还提供了可变的字符串 StringBuilder. 用法和 String 非常相似. 可以方便的和 String 相互转换.
+//        // 但是这个东西可以修改.
+//        // 记录程序开始的时间戳, 单位是毫秒.
+//        StringBuilder stringBuilder = new StringBuilder("Hello");
+//        long beg = System.currentTimeMillis();
+//        for(int i = 0; i < 100_0000; i++){
+//            // 类似于 String 的 += 这个过程不会创建新的 StringBuilder 对象, 都是针对同一个对象操作的.
+//            stringBuilder.append(i);
+//        }
+//        long end = System.currentTimeMillis();
+//        System.out.println(end - beg); //20
+////        System.out.println(stringBuilder);
 
     }
 }
