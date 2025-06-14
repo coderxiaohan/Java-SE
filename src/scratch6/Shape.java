@@ -12,3 +12,6 @@ public abstract class Shape {
     }
     protected double area; // 面积
 }
+
+
+
